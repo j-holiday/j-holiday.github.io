@@ -7,6 +7,7 @@ body {
 	line-height: normal;
 	position: relative;
 	background-color: #fff;
+	border: 5px solid red;
 }
 
 .fixed {
@@ -44,7 +45,7 @@ body {
 } */
 
 header .navbar-default {
-	border: none;
+	border: none; 
 /* RPF Change */
 	border-bottom: thin solid #ea8024;
 	/*border-top: thin solid #ea8024;*/
