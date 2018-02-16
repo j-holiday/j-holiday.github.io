@@ -51,17 +51,14 @@
 			</tbody>
 		</table>
 		<script>
-			/*document.write(artists[0].album);*/
 			var text = "";
 			var newtext = "";
-			/*var x;*/
-			for (var x in artist) {
+			for (var x in artists) {
 				if (artists.hasOwnProperty(x)) {
-					var obj = artist[x];
+					var obj = artists[x];
 					for (var y in obj) {
 						if (obj.hasOwnProperty(y)) {
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
-							/*document.write(y + " -> " + obj[y] + '\n');*/
 						}
 					}
 					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
@@ -69,7 +66,6 @@
 			}
 			document.getElementById("playlist").innerHTML = text;
 			document.getElementById("newplaylist").innerHTML = newtext;
-			/*document.getElementByID("playlist").innerHTML = text;*/
 		</script>
 	</body>
 </html>
