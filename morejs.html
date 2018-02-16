@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>More Javascript</title>
+		<link rel="stylesheet" href="https://j-holiday.github.io/main-php.css">
+		<script>
+			var users = [
+				{
+					"Title": "Say my name",
+					"Artist": "Destiny's Child",
+					"Album": "The writing's on the wall",
+					"Duration": "4:31"
+				},
+				{
+					"Title": "Flawless",
+					"Artist": "Beyonce",
+					"Album": "BEYONCE",
+					"Duration": "4:54"
+				},
+				{
+					"Title": "Crush on you",
+					"Artist": "Lil Kim",
+					"Album": "Not Tonight",
+					"Duration": "4:36"
+				}
+        {
+					"Title": "Don't Trip",
+					"Artist": "Trina",
+					"Album": "Don't Trip",
+					"Duration": "3:57"
+				},
+        {
+					"Title": "Pour it up",
+					"Artist": "Rihanna",
+					"Album": "Unapolegetic",
+					"Duration": "2:41"
+				},
+			];
+		</script>
+	</head>
+	<body>
+		<h1>Javascript Looping</h1>
+		<h2>Current Playlist</h2>
+		<table id="playlist"></table><br><br>
+		<h2>New Playlist Table</h2>
+		<table>
+			<thead>
+				<tr><th>Title</th><th>Artist</th><th>Album</th><th>Duration</th></tr>
+			</thead>
+			<tbody id="newplaylist">
+				
+			</tbody>
+		</table>
+		<script>
+			/*document.write(artists[0].album);*/
+			var text = "";
+			var newtext = "";
+			/*var x;*/
+			for (var x in artist) {
+				if (artists.hasOwnProperty(x)) {
+					var obj = artist[x];
+					for (var y in obj) {
+						if (obj.hasOwnProperty(y)) {
+							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
+							/*document.write(y + " -> " + obj[y] + '\n');*/
+						}
+					}
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
+				}
+			}
+			document.getElementById("playlist").innerHTML = text;
+			document.getElementById("newplaylist").innerHTML = newtext;
+			/*document.getElementByID("playlist").innerHTML = text;*/
+		</script>
+	</body>
+</html>
