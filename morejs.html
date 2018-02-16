@@ -1,52 +1,43 @@
 <html>
 	<head>
 		<title>More Javascript</title>
-		<link rel="stylesheet" href="https://j-holiday.github.io/main-php.css">
+		<link rel="stylesheet" href="https://rfollman.github.io/main-php.css">
 		<script>
 			var users = [
 				{
-					"Title": "Say my name",
-					"Artist": "Destiny's Child",
-					"Album": "The writing's on the wall",
-					"Duration": "4:31"
+					"First": "Rebecca",
+					"Last": "Follman",
+					"User ID": "rfollman",
+					"Date of Login": "02/01/18",
+					"City": "Washington"
 				},
 				{
-					"Title": "Flawless",
-					"Artist": "Beyonce",
-					"Album": "BEYONCE",
-					"Duration": "4:54"
+					"First": "Susan",
+					"Last": "Parks",
+					"User ID": "sparks",
+					"Date of Login": "01/15/18",
+					"City": "Tallahassee"
 				},
 				{
-					"Title": "Crush on you",
-					"Artist": "Lil Kim",
-					"Album": "Not Tonight",
-					"Duration": "4:36"
+					"First": "Zola",
+					"Last": "Hoehn",
+					"User ID": "zola524",
+					"Date of Login": "02/10/18",
+					"City": "Gainesville"
 				}
-        {
-					"Title": "Don't Trip",
-					"Artist": "Trina",
-					"Album": "Don't Trip",
-					"Duration": "3:57"
-				},
-        {
-					"Title": "Pour it up",
-					"Artist": "Rihanna",
-					"Album": "Unapolegetic",
-					"Duration": "2:41"
-				},
 			];
 		</script>
 	</head>
 	<body>
 		<h1>Javascript Looping</h1>
-		<h2>Playlist Table</h2>
-		<table id="playlist"></table><br><br>
-		<h2>New Playlist Table</h2>
+		<h2>People Table</h2>
+		<table id="people"></table><br><br>
+		<h2>New People Table</h2>
 		<table>
 			<thead>
-				<tr><th>Title</th><th>Artist</th><th>Album</th><th>Duration</th></tr>
+				<tr><th>Name</th><th>User ID</th><th>First Login</th><th>City</th></tr>
 			</thead>
-			<tbody id="newplaylist">
+			<tbody id="newpeople">
 				
 			</tbody>
 		</table>
@@ -61,11 +52,11 @@
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 						}
 					}
-					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['First'] + " " + obj['Last'] + "</td><td>" + obj['User ID'] + "</td></tr>";
 				}
 			}
-			document.getElementById("playlist").innerHTML = text;
-			document.getElementById("newplaylist").innerHTML = newtext;
+			document.getElementById("people").innerHTML = text;
+			document.getElementById("newpeople").innerHTML = newtext;
 		</script>
 	</body>
 </html>
