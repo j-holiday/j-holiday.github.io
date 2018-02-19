@@ -61,7 +61,7 @@
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 						}
 					}
-					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>";
 				}
 			}
 			document.getElementById("playlist").innerHTML = text;
