@@ -51,6 +51,12 @@
 			</tbody>
 		</table>
 		<script>
+		function createTable(){
+			var x = document.createElement("TABLE");
+    			x.setAttribute("id", "myTable");
+    			document.body.appendChild(x);
+		}
+			
 			var text = "";
 			var newtext = "";
 			for (var x in users) {
@@ -61,7 +67,8 @@
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 						}
 					}
-					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>";
+					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + 
+						obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>";
 				}
 			}
 			document.getElementById("playlist").innerHTML = text;
