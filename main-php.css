@@ -2,20 +2,11 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Francois+One');
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
-	line-height: normal;
+	font-family: "Segoe UI", AppleSDGothicNeo-Light, Calibri, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size: 1.75em;
+	line-height: 140%;
 	position: relative;
 	background-color: #fff;
-	border: 5px solid blue;
-	<style> 
-	.indented { 
-		padding-left: 1000pt; 
-		padding-right: 1000pt; 
-	} 
-	</style>
-
-	
 }
 
 .fixed {
