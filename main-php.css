@@ -607,7 +607,7 @@ footer {
 	color:#646464;
 }
 #lecture-table tr td:nth-child(2){
-	width:30%;
+	width:100%;
 }
 .recipient-table tr td:last-child{
 	width:70%;
