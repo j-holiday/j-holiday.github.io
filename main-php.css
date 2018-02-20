@@ -22,6 +22,14 @@ body {
 	position: fixed;
 }
 
+.tbl{
+    position:fixed;
+    width:100%;
+    border:3px solid #fff;
+    background:#000;
+    box-sizing:border-box; /* causes item size to include border and padding */
+    -moz-box-sizing:border-box; /*for browser compatibility*/
+}
 
 /** Important message box **/
 
