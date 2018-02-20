@@ -22,13 +22,14 @@ body {
 	position: fixed;
 }
 
-.tbl{
-    position:fixed;
-    width:100%;
-    border:3px solid #fff;
-    background:#000;
-    box-sizing:border-box; /* causes item size to include border and padding */
-    -moz-box-sizing:border-box; /*for browser compatibility*/
+td {
+	border: thin solid #C9243D;
+	padding: 5px;
+}
+
+th {
+	color: #C9243D;
+	text-align: left;
 }
 
 /** Important message box **/
@@ -61,7 +62,7 @@ body {
 } */
 
 header .navbar-default {
-	border: none; 
+	border: none;
 /* RPF Change */
 	border-bottom: thin solid #ea8024;
 	/*border-top: thin solid #ea8024;*/
@@ -190,7 +191,7 @@ div.sub-nav.sticky {
 .cd-container {
   width: 90%;
   max-width: 768px;
-  margin: 0;
+  margin: 2em auto;
 }
 .cd-container::after {
   /* clearfix */
@@ -305,7 +306,7 @@ a:hover {
 .inside {
 	max-width: 1200px;
 	width: 80%;
-	margin: 0;
+	margin: auto;
 }
 .breadcrumb {
 	color: #b01700;
@@ -365,6 +366,7 @@ a:hover {
 }
 .content {
 	padding-top: 10px;
+	margin-left: 50px;
 	background-color: #fff;
 	min-height: 600px;
 	padding-bottom: 20px;
@@ -615,7 +617,7 @@ footer {
 	color:#646464;
 }
 #lecture-table tr td:nth-child(2){
-	width:100%;
+	width:30%;
 }
 .recipient-table tr td:last-child{
 	width:70%;
