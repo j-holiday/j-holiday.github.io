@@ -51,19 +51,12 @@
 			</tbody>
 		</table>
 		<script>
-		function createTable(){
-			var x = document.createElement("TABLE");
-    			x.setAttribute("id", "myTable");
-    			document.body.appendChild(x);
+		function countSongsAndArtists(){
 			
-			var y = document.createElement("TR");
-    			y.setAttribute("id", "myTr");
-    			document.getElementById("myTable").appendChild(y);
+		}
+		function addTime(a){
+			return a;
 			
-			var z = document.createElement("TD");
-    			var t = document.createTextNode("cell");
-    			z.appendChild(t);
-    			document.getElementById("myTr").appendChild(z);
 		}
 			
 			var text = "";
@@ -77,7 +70,8 @@
 						}
 					}
 					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + 
-						obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>";
+						obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>"+ 
+						"</td><td>" + addTime(obj['Duration']) + "</td></tr>";
 				}
 			}
 			document.getElementById("playlist").innerHTML = text;
