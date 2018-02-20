@@ -297,7 +297,7 @@ a:hover {
 .inside {
 	max-width: 1200px;
 	width: 80%;
-	margin: auto;
+	margin: 0;
 }
 .breadcrumb {
 	color: #b01700;
