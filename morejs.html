@@ -22,19 +22,19 @@
 					"Album": "Not Tonight",
 					"Duration": "4:36"
 				},
-        {
+				{
 					"Title": "Don't Trip",
 					"Artist": "Trina",
 					"Album": "Don't Trip",
 					"Duration": "3:57"
 				},
-        {
+				{
 					"Title": "Pour it up",
 					"Artist": "Rihanna",
 					"Album": "Unapolegetic",
 					"Duration": "2:41"
-				},
-			];
+				}
+				];
 		</script>
 	</head>
 	<body>
@@ -50,28 +50,38 @@
 				
 			</tbody>
 		</table>
+		<h2>Playlist Stats Table</h2>
+		<table>
+			<thead>
+				<tr><th># of Songs</th><th># of Artists</th><th>Playlist Length</th></tr>
+			</thead>
+			<tbody id="playliststats">
+				
+			</tbody>
 		<script>
-		/*function addTime(a){
-			//timeToMilli(a);
-			difference_ms = difference_ms/1000;
-  			var seconds = Math.floor(difference_ms % 60);
-			difference_ms = difference_ms/60; 
-			var minutes = Math.floor(difference_ms % 60);
-			return*/ 
+		function convertBack(a){
+			a = a/1000;
+  			var seconds = Math.floor(a % 60);
+			a = a/60; 
+			var minutes = Math.floor(a % 60);
+			return minutes + ' minutes, ' + seconds + ' seconds';
 			
 		}
-		/*function timeToMilli(a){
+		function timeToMs(a){
 			var minutes = a.split(":")[0],
-			    seconds = a.split(":")[1],
-			time1 = new Date(minutes, seconds);
-			var time1_ms = time1.getTime();
-			//msSum = msSum + time1_ms
-			return time1_ms;*/
+			    seconds = a.split(":")[1];
+			var time1 = new Date(1970,0,01,-5,minutes, seconds);
+			time1_ms = time1.getTime(0);
+			return time1_ms;
 			
 		}
+		//function add(a){
+			
 			
 			var text = "";
 			var newtext = "";
+			var stattext = "";
+			var msSum = 0;
 			for (var x in users) {
 				if (users.hasOwnProperty(x)) {
 					var obj = users[x];
@@ -80,14 +90,26 @@
 							text += "<tr><td align='right'>" + y + "</td><td>" + obj[y] + "</td></tr>";
 						}
 					}
-					newtext += "<tr><td>" + obj['Title'] + " " + obj['Artist'] + "</td><td>" + 
-						obj['Album'] + "</td></tr>" + obj['Duration'] + "</td></tr>"+ 
-						"</td><td>" + /*timeToMilli(obj['Duration']) +*/ "</td></tr>";
-					//msSum = msSum + time1_ms
+					newtext += "<tr><td>" + obj['Title'] + "</td><td>"+
+					obj['Artist'] + "</td><td>"+
+					obj['Album'] +"</td><td>" +
+					obj['Duration'] + "</td></tr>";
+					//timeToMs(obj['Duration']) + "</td></tr>";
+					
+					value = timeToMs(obj['Duration']);
+					msSum = msSum + value;
+					playlistLength = convertBack(msSum);
+				
 				}
 			}
+			var artistCount = (Object.keys('Artist').length) - 1;
+			var songCount = (Object.keys('Song').length) + 1;
+			console.log(Object.keys('Song'));
+			stattext = "<tr><td>" + songCount + "</td><td>" + artistCount + "</td><td>"+ playlistLength + "</td></tr>";
+			
 			document.getElementById("playlist").innerHTML = text;
 			document.getElementById("newplaylist").innerHTML = newtext;
+			document.getElementById("playliststats").innerHTML = stattext;
 		</script>
 	</body>
 </html>
